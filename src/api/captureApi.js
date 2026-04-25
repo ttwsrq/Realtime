@@ -1,5 +1,4 @@
-Real-time Packet Capture API
-import { supabase } from "../../shared/utils/supabaseClient.js";
+import { supabase } from "../shared/supabaseClient.js";
 
 export async function savePacket({ srcIp, dstIp, srcPort, dstPort, protocol, encryption, sizeBytes, payloadPreview }) {
   const { data, error } = await supabase
@@ -20,7 +19,6 @@ export async function savePacket({ srcIp, dstIp, srcPort, dstPort, protocol, enc
   return data;
 }
 
-// Subscribe realtime — ใช้ใน client-side
 export function subscribeToNewPackets(callback) {
   return supabase
     .channel("packets-realtime")

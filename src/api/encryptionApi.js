@@ -1,5 +1,4 @@
-Encryption Detection API
-import { supabase } from "../../shared/utils/supabaseClient.js";
+import { supabase } from "../shared/supabaseClient.js";
 
 export async function logEncryptionDetection({ packetId, encryptionVersion, cipherSuite, handshakeTimeMs, isValid, notes }) {
   const { data, error } = await supabase

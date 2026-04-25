@@ -1,5 +1,4 @@
-User Management API
-import { supabase, supabaseAdmin } from "../../shared/utils/supabaseClient.js";
+import { supabase, supabaseAdmin } from "../shared/supabaseClient.js";
 
 export async function getAllUsers() {
   const { data, error } = await supabase

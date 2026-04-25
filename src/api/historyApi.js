@@ -1,4 +1,4 @@
-import { supabase } from "../../shared/utils/supabaseClient.js";
+import { supabase } from "../shared/supabaseClient.js";
 
 export async function getPacketHistory({ page = 1, pageSize = 50, protocol, encryption } = {}) {
   let query = supabase

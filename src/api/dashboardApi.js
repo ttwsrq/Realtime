@@ -1,5 +1,4 @@
-// [ตร๋อง] Dashboard & Charts API
-import { supabase } from "../../../shared/utils/supabaseClient.js";
+import { supabase } from "../shared/supabaseClient.js";
 
 export async function getDashboardStats() {
   const { data, error } = await supabase.from("dashboard_stats").select("*").single();

@@ -1,4 +1,4 @@
-import { supabase } from "../../shared/utils/supabaseClient.js";
+import { supabase } from "../shared/supabaseClient.js";
 
 export async function getProtocolBreakdown() {
   const { data, error } = await supabase.from("protocol_breakdown").select("*");
